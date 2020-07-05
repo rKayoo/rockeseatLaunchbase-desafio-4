@@ -25,7 +25,7 @@ O projeto foi desenvolvido com as seguintes tecnologias
 
 ```bash
   # Clonar o repositório
-  $ git clone https://github.com/rKayoo/Launchbase-desafios-03
+  $ git clone https://github.com/rKayoo/rockeseatLaunchbase-desafios-04
 
   # Entrar no diretório
   $ cd Launchbase-desafios-03
