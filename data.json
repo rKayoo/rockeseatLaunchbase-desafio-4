@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "r",
+      "avatar_url": "http://google.com",
+      "birth": 79845177600000,
+      "educational_level": "1",
+      "type": "Pr",
+      "subjects": "f",
+      "since": 1594819297427
+    },
+    {
+      "id": 2,
+      "name": "Nicolas Chan",
+      "avatar_url": "https://avatarfiles.alphacoders.com/165/thumb-165945.jpg",
+      "birth": 931564800000,
+      "educational_level": "4",
+      "type": "On",
+      "subjects": "Lol, Tenis, Computacao, Vida",
+      "since": 1594819474355
+    }
+  ]
+}

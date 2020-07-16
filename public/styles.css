@@ -1,5 +1,6 @@
 :root {
   --primary-color: white;
+  --secondary-color: #855342;
 }
 
 * {
@@ -10,11 +11,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(255, 255, 91);
+  background-color: var(--secondary-color);
 }
 
 header {
-  background-color: rgb(197, 49, 49);
+  background-color: #006400;
   width: 100;
   padding: 32px;
   text-align: center;
@@ -119,7 +120,7 @@ header {
 
 .details span{
   padding: 8px 16px;
-  background-color: rgb(58, 58, 255);
+  background-color: rgb(78, 205, 228);
   border-radius: 16px;
   
   display: inline-block;
@@ -129,4 +130,29 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
+}
+
+/* === CREATE === */
+
+.details input {
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 12px;
+}
+
+.details button {
+  background-color: yellowgreen;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 8px;
+  outline: none;
 }
