@@ -134,7 +134,8 @@ header {
 
 /* === CREATE === */
 
-.details input {
+.details input,
+.details select {
   width: 100%;
   color: #333;
   font-size: 16px;
@@ -147,7 +148,8 @@ input[type="radio"] {
   margin-right: 12px;
 }
 
-.details button {
+.details button,
+.details a.button {
   background-color: yellowgreen;
   border-radius: 8px;
   padding: 8px 16px;
@@ -155,4 +157,12 @@ input[type="radio"] {
   font-weight: bold;
   margin-top: 8px;
   outline: none;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
