@@ -153,7 +153,7 @@ input[type="radio"] {
   background-color: yellowgreen;
   border-radius: 8px;
   padding: 8px 16px;
-  width: 100%;
+  width: 49%;
   font-weight: bold;
   margin-top: 8px;
   outline: none;
@@ -165,4 +165,8 @@ a.button {
   color: black;
   text-align: center;
   text-decoration: none;
+}
+
+#delete-button {
+  background-color: rgb(235, 41, 41);
 }

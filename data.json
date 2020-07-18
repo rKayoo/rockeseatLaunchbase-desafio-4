@@ -2,33 +2,23 @@
   "teachers": [
     {
       "id": 1,
-      "name": "Nicolas Chan",
+      "name": "Nicolas ",
       "avatar_url": "https://avatarfiles.alphacoders.com/165/thumb-165945.jpg",
-      "birth": 4831142400000,
-      "educational_level": "3",
-      "type": "Presencial",
-      "subjects": "Lol, Tenis, Computacao, Vida",
+      "birth": 944006400000,
+      "educational_level": "4",
+      "type": "Online",
+      "subjects": "Tenis",
       "since": 1594990652697
     },
     {
       "id": 2,
-      "name": "r",
-      "avatar_url": "https://source.unsplash.com/collection/489203/300x600",
-      "birth": 952819200000,
-      "educational_level": "1",
-      "type": "Online",
-      "subjects": "Espanhol, Geografa",
-      "since": 1594993663558
-    },
-    {
-      "id": 3,
-      "name": "a",
-      "avatar_url": "https://source.unsplash.com/collection/489203/300x600",
-      "birth": 1515715200000,
+      "name": "Amanda",
+      "avatar_url": "https://avatarfiles.alphacoders.com/165/thumb-165945.jpg",
+      "birth": 1355270400000,
       "educational_level": "4",
       "type": "Presencial",
-      "subjects": "Biologia",
-      "since": 1594993814337
+      "subjects": "Espanhol",
+      "since": 1595042142986
     }
   ]
 }

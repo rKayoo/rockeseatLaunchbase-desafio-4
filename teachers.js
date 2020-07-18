@@ -67,10 +67,57 @@ exports.edit = function(req, res) {
 
   if(!foundTeacher) return res.send('It was not possible to find this teacher');
 
-  const instructor = {
+  const teacher= {
     ...foundTeacher,
     birth: date(foundTeacher.birth)
   }
 
-  return res.render('teachers/edit', { instructor });
+  return res.render('teachers/edit', { teacher });
+}
+
+// put
+exports.put = function(req, res) {
+  const { id } = req.body;
+  let index = 0;
+
+  const foundTeacher = data.teachers.find(function(teacher, foundIndex) {
+    if(teacher.id == id) {
+      index = foundIndex;
+      return true;
+    }
+  });
+
+  if(!foundTeacher) return res.send('It was not possible to find this teacher');
+
+  const teacher = {
+    ...foundTeacher,
+    ...req.body,
+    id: Number(id),
+    birth: Date.parse(req.body.birth)
+  }
+
+  data.teachers[index] = teacher;
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
+    if(err) return res.send('Not possible to update file!');
+
+    return res.redirect(`teachers/${id}`);
+  })
+}
+
+// delete
+exports.delete = function(req, res) {
+  const { id } = req.body;
+
+  const foundTeacher = data.teachers.filter(function(teacher) {
+    return id != teacher.id
+  });
+
+  data.teachers = foundTeacher;
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
+    if(err) return res.send('Ops, it was not possible to complete this action!');
+
+    return res.redirect('/teachers');
+  })
 }
