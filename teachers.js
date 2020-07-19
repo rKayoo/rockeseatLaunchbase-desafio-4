@@ -2,6 +2,17 @@ const fs = require('fs');
 const data = require('./data.json');
 const {age, graduation, date} = require('./utils.js');
 
+exports.index = function(req, res) {
+  const teachers = data.teachers;
+
+  for(let teacher of teachers) {
+    teacher.subjects = String(teacher.subjects);
+    teacher.subjects = teacher.subjects.split(',');
+  }
+
+  return res.render('teachers/index', {teachers: data.teachers});
+}
+
 // create 
 exports.post = function(req, res) {
   const keys = Object.keys(req.body);
@@ -45,6 +56,8 @@ exports.show = function(req, res) {
   });
 
   if(!foundTeacher) return res.send('It was not possible to find this teacher');
+
+  foundTeacher.subjects = String(foundTeacher.subjects)
 
   const info = {
     ...foundTeacher,

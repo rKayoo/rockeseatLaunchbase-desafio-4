@@ -159,6 +159,10 @@ input[type="radio"] {
   outline: none;
 }
 
+.details .button.single-button {
+  width: 100%;
+}
+
 a.button {
   display: block;
   box-sizing: border-box;
@@ -169,4 +173,81 @@ a.button {
 
 #delete-button {
   background-color: rgb(235, 41, 41);
+}
+
+/* === INDEX-PAGE === */
+.table-container {
+  display: block;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.table-container table {
+  border-spacing: 0px;
+}
+
+.table-container thead {
+  text-align: left;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: bold;
+}
+
+.table-container tbody {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 16px;
+  border-bottom: 1px solid grey;
+}
+
+tbody tr td:first-child {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  align-items: center;
+}
+
+tbody tr td:first-child span {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow:3px 1px 6px -4px black;
+  border: 2px solid white;
+}
+
+tbody tr td:nth-child(2) span{
+  padding: 8px 16px;
+  background-color: rgb(78, 205, 228);
+  border-radius: 16px;
+  
+  display: inline-block;
+  margin-right: 2px;
+  margin-top: 4px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr td:last-child a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: yellowgreen;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+thead tr th:last-child,
+tbody tr td:last-child  {
+  text-align: center;
 }
