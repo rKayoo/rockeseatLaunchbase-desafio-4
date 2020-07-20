@@ -1,0 +1,10 @@
+<script>
+  const deleteFile = document.querySelector('#delete-form');
+  deleteFile.addEventListener('submit', function(event) {
+    const confirmation = confirm('Você deseja deletar?');
+    
+    if(!confirmation) {
+      event.preventDefault()
+    }
+  });
+</script>

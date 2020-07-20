@@ -1,19 +1,26 @@
 const fs = require('fs');
-const data = require('./data.json');
-const {age, graduation, date} = require('./utils.js');
+const data = require('../data.json');
+const {age, graduation, date} = require('../utils.js');
 
 exports.index = function(req, res) {
-  const teachers = data.teachers;
+  const teachers = [];
 
-  for(let teacher of teachers) {
-    teacher.subjects = String(teacher.subjects);
-    teacher.subjects = teacher.subjects.split(',');
+  for(let teacher of data.teachers) {
+    const professor = {
+      ...teacher,
+      subjects: teacher.subjects.split(',')
+    }
+
+    teachers.push(professor);
   }
 
-  return res.render('teachers/index', {teachers: data.teachers});
-}
+  return res.render('teachers/index', {teachers});
+};
 
-// create 
+exports.create = function(req, res) {
+  return res.render('teachers/create');
+};
+
 exports.post = function(req, res) {
   const keys = Object.keys(req.body);
 
@@ -47,7 +54,6 @@ exports.post = function(req, res) {
   });
 };
 
-//show 
 exports.show = function(req, res) {
   const { id } = req.params;
 
@@ -56,8 +62,6 @@ exports.show = function(req, res) {
   });
 
   if(!foundTeacher) return res.send('It was not possible to find this teacher');
-
-  foundTeacher.subjects = String(foundTeacher.subjects)
 
   const info = {
     ...foundTeacher,
@@ -68,9 +72,8 @@ exports.show = function(req, res) {
   }
 
   return res.render('teachers/show', {teachers: info});
-}
+};
 
-//edit
 exports.edit = function(req, res) {
   const { id } = req.params;
 
@@ -82,13 +85,12 @@ exports.edit = function(req, res) {
 
   const teacher= {
     ...foundTeacher,
-    birth: date(foundTeacher.birth)
+    birth: date(foundTeacher.birth).iso
   }
 
   return res.render('teachers/edit', { teacher });
-}
+};
 
-// put
 exports.put = function(req, res) {
   const { id } = req.body;
   let index = 0;
@@ -116,9 +118,8 @@ exports.put = function(req, res) {
 
     return res.redirect(`teachers/${id}`);
   })
-}
+};
 
-// delete
 exports.delete = function(req, res) {
   const { id } = req.body;
 
@@ -133,4 +134,4 @@ exports.delete = function(req, res) {
 
     return res.redirect('/teachers');
   })
-}
+};

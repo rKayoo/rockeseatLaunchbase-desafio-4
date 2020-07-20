@@ -31,6 +31,31 @@ module.exports = {
      const month = `0${birthDate.getUTCMonth() + 1}`.slice(-2);
      const day = `0${birthDate.getUTCDate()}`.slice(-2);
 
-     return `${year}-${month}-${day}`;
+     return {
+       day,
+       month,
+       year,
+       iso: `${year}-${month}-${day}`,
+       birthday: `${day}/${month}`
+    };
+  },
+  grade: function(year) {
+    if(year == 1) {
+      return '5EF';
+    } else if (year == 2) {
+      return '6EF';
+    } else if (year == 3) {
+      return '7EF';
+    } else if (year == 4) {
+      return '8EF';
+    } else if (year == 5) {
+      return '9EF';
+    } else if (year == 6) {
+      return '1EM';
+    } else if (year == 7) {
+      return '2EM';
+    } else {
+      return '3EM';
+    }
   }
 }

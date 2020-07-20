@@ -34,7 +34,7 @@
 </div>
 
 <div class="item">
-  <div>Grau de escolaridade</div>
+  <div>Ano Escolar</div>
   <div>
     <select name="educational_level">
       <option 
@@ -43,17 +43,17 @@
       </option>
       <option 
         value="2" 
-        {{ "selected" if teacher.educational_level == 2}}
+        {% if teacher.educational_level == 2 %}selected{% endif %}
       >Ensino Superior Completo
       </option>
       <option
         value="3" 
-        {{ "selected" if teacher.educational_level == 3}}
+        {% if teacher.educational_level == 3 %}selected{% endif %}
       >Mestrado
       </option>
       <option 
         value="4" 
-        {{ "selected" if teacher.educational_level == 4}}
+        {% if teacher.educational_level == 4 %}selected{% endif %}
       >Doutorado
       </option>
     </select>

@@ -1,12 +1,9 @@
-const modalOverlay = document.querySelector('.modal-overlay');
-const modal = document.querySelector('.modal');
-const courses = document.querySelectorAll('.course');
-const expand = document.querySelector('.expand');
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll('header .links a');
 
-
-for(const course of courses) {
-  course.addEventListener('click', () => {
-    const nameId = course.getAttribute('Id');
-    window.location.href = `/courses/${nameId}`;
-  });
+for(item of menuItems) {
+  console.log(item);
+  if(currentPage.includes(item.getAttribute('href'))) {
+    item.classList.add('active');
+  }
 }

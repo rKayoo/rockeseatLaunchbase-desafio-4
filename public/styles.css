@@ -60,7 +60,7 @@ header {
 /* === CARD === */
 .card {
   background-color: whitesmoke;
-  width: 800px;
+  width: 80%;
   min-height: 400px;
 
   margin: 45px auto;
@@ -238,7 +238,8 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+a.new-button {
   text-decoration: none;
   text-transform: uppercase;
   background-color: yellowgreen;
@@ -250,4 +251,10 @@ tbody tr td:last-child a {
 thead tr th:last-child,
 tbody tr td:last-child  {
   text-align: center;
+}
+
+a.new-button {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
