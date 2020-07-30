@@ -28,7 +28,7 @@ O projeto foi desenvolvido com as seguintes tecnologias
   $ git clone https://github.com/rKayoo/rockeseatLaunchbase-desafios-04
 
   # Entrar no diretório
-  $ cd Launchbase-desafios-03
+  $ cd rocketseatLaunchbase-desafios-04
 
   # Instalar as dependências
   $ npm install
