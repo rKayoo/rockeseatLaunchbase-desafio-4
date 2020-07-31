@@ -8,7 +8,7 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background: url({{ teachers.avatar_url }}) no-repeat center center / cover">
+      style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover">
     </section>
 
     <section class="details">
@@ -17,37 +17,37 @@
 
       <div class="item">
         <div>Nome</div>
-        <div>{{ teachers.name }}</div>
+        <div>{{ teacher.name }}</div>
       </div>
       
       <div class="item">
         <div>Idade</div>
-        <div>{{ teachers.age }}</div>
+        <div>{{ teacher.age }}</div>
       </div>
       
       <div class="item">
         <div>Grau de escolaridade</div>
-        <div>{{ teachers.educational_level}}</div>
+        <div>{{ teacher.education_level}}</div>
       </div>
       
       <div class="item">
         <div>Tipo de aula</div>
-        <div>{{ teachers.type }}</div>
+        <div>{{ teacher.class_type }}</div>
       </div>
       
       <div class="item">
         <div>Acompanhamento</div>
-        {% for subject in teachers.subjects %}
+        {% for subject in teacher.subjects_taught %}
         <span>{{ subject }}</span>
         {% endfor %}
       </div>
 
       <div class="item">
         <div>Desde</div>
-        <div>{{ teachers.since }}</div>
+        <div>{{ teacher.created_at }}</div>
       </div>
 
-      <a href="/teachers/{{teachers.id}}/edit" class="button single-button">EDITAR</a>
+      <a href="/teachers/{{teacher.id}}/edit" class="button single-button">EDITAR</a>
       
     </section>
   </div>
