@@ -18,6 +18,7 @@ O projeto foi desenvolvido com as seguintes tecnologias
 - CSS
 - [Javascript](https://www.javascript.com/)
 - [NodeJS](https://nodejs.org/)
+- [Postgres](https://www.postgresql.org/)
 
 ---
 
