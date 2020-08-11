@@ -3,12 +3,22 @@ const {grade, date} = require('../../lib/utils');
 
 module.exports = {
   index: function(req, res) {
-    Student.all(function(students) {
+    Student.all(function(studentsTable) {
+      let students = []; 
+
+      for(let student of studentsTable) {
+        student.school_year = grade(student.school_year);
+
+        students.push(student);
+      }
+
       res.render('students/index', { students })
     })
   },
   create: function(req, res) {
-    return res.render('students/create');
+    Student.teacherSelectOption(function(teachers) {
+      return res.render('students/create', { teachers });
+    });
   },
   post: function(req, res) {
     const keys = Object.keys(req.body);
@@ -38,7 +48,9 @@ module.exports = {
 
       student.birth_date = date(student.birth_date).iso;
 
-      res.render('students/edit', { student })
+      Student.teacherSelectOption(function(teachers) {
+        res.render('students/edit', { student, teachers })
+      });
     })
   },
   put: function(req, res) {
@@ -57,5 +69,5 @@ module.exports = {
     Student.delete(req.body.id, function() {
       res.redirect('/students')
     })
-  },
+  }, 
 }
