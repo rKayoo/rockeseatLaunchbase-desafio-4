@@ -297,3 +297,32 @@ a.new-button {
   font-size: 14px;
   text-transform: uppercase;
 }
+
+/* Pagination */
+.table-container {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+  margin: 0;
+  align-self: start;
+}
+
+.table-container .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+  color: #555;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+}

@@ -3,17 +3,37 @@ const {grade, date} = require('../../lib/utils');
 
 module.exports = {
   index: function(req, res) {
-    Student.all(function(studentsTable) {
-      let students = []; 
+    let { filter, limit, page } = req.query;
 
-      for(let student of studentsTable) {
-        student.school_year = grade(student.school_year);
+    page = page || 1;
+    limit = limit || 2;
+    
+    let offset = limit * (page - 1);
 
-        students.push(student);
+    const params = {
+      filter,
+      limit,
+      page,
+      offset,
+      callback(studentsTable) {
+        const pagination = {
+          page,
+          total: Math.ceil(studentsTable[0].total / limit)
+        }
+
+        let students = []; 
+
+        for(let student of studentsTable) {
+          student.school_year = grade(student.school_year);
+
+          students.push(student);
+        }
+
+        res.render('students/index', { students, pagination, filter });
       }
+    }
 
-      res.render('students/index', { students })
-    })
+    Student.paginate(params);
   },
   create: function(req, res) {
     Student.teacherSelectOption(function(teachers) {

@@ -3,7 +3,7 @@
 </h1>
 
 ## 🔖 Sobre
-Site de aulas particulares. 
+Site de aulas particulares. Alunos podem achar 
 
 ---
 
