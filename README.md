@@ -21,7 +21,7 @@ Projeto está sendo desenvolvido nos desafios do **bootcamp Launchbase** da **Ro
 - Filtrar dados na listagem da tabela
 - Lógica de paginação dos resultados do BD 
 
---
+---
 
 ## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido com as seguintes tecnologias
