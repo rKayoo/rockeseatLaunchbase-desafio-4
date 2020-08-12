@@ -3,7 +3,7 @@
 </h1>
 
 ## 🔖 Sobre
-Site de aulas particulares
+Site de aulas particulares. 
 
 ---
 
@@ -12,12 +12,22 @@ Projeto está sendo desenvolvido nos desafios do **bootcamp Launchbase** da **Ro
 
 ---
 
+## 🤓 O que eu aprendi?
+- Criar um formulário
+- Ultilizar rotas usando Node.js
+- Métodos HTTPS (Put, Get, Post, Delete)
+- Usar a query do banco de dados
+- Inserir, buscar, atualizar, e deletar dados
+- Filtrar dados na listagem da tabela
+- Lógica de paginação dos resultados do BD 
+
 ## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido com as seguintes tecnologias
 - HTML
 - CSS
 - [Javascript](https://www.javascript.com/)
 - [NodeJS](https://nodejs.org/)
+- [Postgres](https://www.postgresql.org/)
 
 ---
 
